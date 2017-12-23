@@ -7,16 +7,17 @@ let createButton = document.getElementById("createButton");
 let output = document.getElementById("output");
 
 const printMessage = (userText) =>{
-    let newCardElement = document.createElement("div");
+    let newCardElement = document.createElement("div"); //creates new div
     console.log(newCardElement);
-    let userOutput = document.createTextNode(inputField.value); //put string in the parentheses, or in this case, put user's text in.d
+    let userOutput = document.createTextNode(`${inputField.value} `); //put string in the parentheses, or in this case, put user's text in.
     console.log(userOutput);
-    newCardElement.appendChild(userOutput);
-    let deleteButton = document.createElement("button");
-    deleteButton.innerHTML += `delete`;
-    newCardElement.appendChild(deleteButton);
+    newCardElement.appendChild(userOutput); //places text node within new div
+    let deleteButton = document.createElement("button"); //creates button html element
+    deleteButton.innerHTML += `delete`; // writes delete to dom with "button" element
+    newCardElement.appendChild(deleteButton); //places delete button with new div created at top
     console.log(deleteButton);
     // output.innerHTML += inputField.value;
+    output.appendChild(newCardElement); //puts new div created at top within a div established in the html
 }
 
 createButton.addEventListener("click", printMessage);
