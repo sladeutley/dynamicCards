@@ -7,7 +7,12 @@ let createButton = document.getElementById("createButton");
 let output = document.getElementById("output");
 
 const printMessage = (userText) =>{
-    output.innerHTML += inputField.value;
+    let newCardElement = document.createElement("div");
+    console.log(newCardElement);
+    let userOutput = document.createTextNode(inputField.value); //put string in the parentheses, or in this case, put user's text in.d
+    console.log(userOutput);
+    output.innerHTML += userOutput;
+    // output.innerHTML += inputField.value;
 }
 
 createButton.addEventListener("click", printMessage);
