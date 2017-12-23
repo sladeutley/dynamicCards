@@ -11,7 +11,11 @@ const printMessage = (userText) =>{
     console.log(newCardElement);
     let userOutput = document.createTextNode(inputField.value); //put string in the parentheses, or in this case, put user's text in.d
     console.log(userOutput);
-    output.innerHTML += userOutput;
+    newCardElement.appendChild(userOutput);
+    let deleteButton = document.createElement("button");
+    deleteButton.innerHTML += `delete`;
+    newCardElement.appendChild(deleteButton);
+    console.log(deleteButton);
     // output.innerHTML += inputField.value;
 }
 
