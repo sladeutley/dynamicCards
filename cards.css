@@ -1,3 +1,18 @@
 input {
     width: 65%;
 }
+
+#newOutputDiv {
+    border: 3px dashed plum;
+    width: 20%;
+    height: 4em;
+    padding: 2em 2em 2em 2em;
+    overflow: auto;
+    display: flex;
+    word-wrap: wrap;
+    justify-content: center;
+}
+
+#deleteUserInput {
+    color: rgb(72, 96, 175);
+}

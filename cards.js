@@ -8,11 +8,13 @@ let output = document.getElementById("output");
 
 const printMessage = (userText) =>{
     let newCardElement = document.createElement("div"); //creates new div
+    newCardElement.setAttribute("id", "newOutputDiv") //gives new element id, class, etc.
     console.log(newCardElement);
     let userOutput = document.createTextNode(`${inputField.value} `); //put string in the parentheses, or in this case, put user's text in.
     console.log(userOutput);
     newCardElement.appendChild(userOutput); //places text node within new div
     let deleteButton = document.createElement("button"); //creates button html element
+    deleteButton.setAttribute("id", "deleteUserInput") //give delete button id
     deleteButton.innerHTML += `delete`; // writes delete to dom with "button" element
     newCardElement.appendChild(deleteButton); //places delete button with new div created at top
     console.log(deleteButton);
