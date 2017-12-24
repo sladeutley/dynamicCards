@@ -8,7 +8,7 @@ let output = document.getElementById("output");
 
 const printMessage = (userText) =>{
     let newCardElement = document.createElement("div"); //creates new div
-    newCardElement.setAttribute("id", "newOutputDiv") //gives new element id, class, etc.
+    newCardElement.setAttribute("id", "newOutputDiv"); //gives new element id, class, etc.
     console.log(newCardElement);
     let userOutput = document.createTextNode(`${inputField.value} `); //put string in the parentheses, or in this case, put user's text in.
     console.log(userOutput);
@@ -20,8 +20,25 @@ const printMessage = (userText) =>{
     console.log(deleteButton);
     // output.innerHTML += inputField.value;
     output.appendChild(newCardElement); //puts new div created at top within a div established in the html
-}
+    inputField.value = ""; //sets user input to blank
+    const deleteCard = () => output.removeChild(newCardElement); //deletes card just added
+    deleteButton.addEventListener("click", deleteCard);
+
+};
+// NOT WORKING AND CAN'T FIGURE OUT!
+// let pressingEnter = () => {
+//     let userText = document.getElementById("userInput");
+//     userText.addEventListener('keypress', function (e) {
+//     let key = e.keyCode;
+//     if (key === 13) {
+//         console.log("enter key working");
+//         printMessage();
+//     }
+//     });
+// }; 
 
 createButton.addEventListener("click", printMessage);
+
+
 
 

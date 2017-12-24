@@ -11,6 +11,7 @@ input {
     display: flex;
     word-wrap: wrap;
     justify-content: center;
+    justify-content: space-between;
 }
 
 #deleteUserInput {
